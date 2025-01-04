@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Advanced Assignment 01</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="img/image.png" alt="logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#Profile">Profile</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="banner splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">Banner 1</li>
+            <li class="splide__slide">Banner 2</li>
+            <li class="splide__slide">Banner 3</li>
+          </ul>
+        </div>
+      </div>
+
+      <section id="Profile">
+        <div class="content">
+          <div class="left-section">
+            <div class="purple-box"></div>
+            <div class="yellow-background"></div>
+          </div>
+          <div class="right-section">
+            <form class="contact-form">
+              <input type="text" name="Name" />
+              <input type="email" name="Email" />
+              <select class="custom-dropdown">
+                <option value="" disabled selected></option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+              </select>
+              <button type="submit">Submit</button>
+            </form>
+            <div class="green-box"></div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <ul>
+          <li><a href="#">Home</a></li>
+          |
+          <li><a href="#">Services</a></li>
+          |
+          <li><a href="#">Profile</a></li>
+          |
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function (){
+        var splide = new Splide(".banner", {
+          type: "loop",
+          perPage: 1,
+          autoplay: true,
+          interval: 3000,
+        });
+
+        splide.mount();
+      });
+    </script>
+  </body>
+</html>
